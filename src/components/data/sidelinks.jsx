@@ -16,9 +16,9 @@ export const GlobalSideLinks = [
     icon: <IconChecklist size={18} />,
   },
   {
-    title: 'Table1',
+    title: 'Pharmacies',
     label: '3',
-    href: 'table1s',
+    href: 'pharmacies',
     icon: <IconChecklist size={18} />,
   },
 ]

@@ -71,14 +71,14 @@ export const AddTimeTableAction = (payload)=>(
 )
 
 // Add Trainer Action
-export const AddTable1Action = (payload)=>(
+export const AddPharmacyAction = (payload)=>(
   {
     type : ADD_TABLE1,
     payload
   }
 )
 
-export const EditTable1Action = (payload)=>(
+export const EditPharmacyAction = (payload)=>(
     {
         type : EDIT_TABLE1,
         payload
@@ -101,7 +101,7 @@ export const DeleteUserAction = (payload)=>(
   }
 )
 
-export const DeleteTable1Action = (payload)=>(
+export const DeletePharmacyAction = (payload)=>(
     {
         type : DELETE_TABLE1,
         payload

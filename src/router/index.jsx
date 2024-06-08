@@ -25,9 +25,9 @@ const router = createBrowserRouter([
                 }),
             },
             {
-                path: '/table1s',
+                path: '/Pharmacies',
                 lazy: async () => ({
-                    Component: (await import('../pages/Table1s/index.jsx')).default,
+                    Component: (await import('../pages/Pharmacy/index.jsx')).default,
                 }),
             },
             // {

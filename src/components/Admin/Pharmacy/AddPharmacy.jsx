@@ -10,53 +10,53 @@ import {Button} from '../../ui/button.jsx'
 
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select.jsx";
 import {CatchActionForForms} from "@/Library/index.jsx";
-import GlobalState, {useGlobalContext} from "@/context/GlobalState.jsx";
+import {useGlobalContext} from "@/context/GlobalState.jsx";
 import {toast} from "sonner";
 import {ActionsApi} from "@/Services/Actions/ActionsApi.js";
-import {AddTable1Action, EditTable1Action} from "@/context/Features/Actions.js";
+import {AddPharmacyAction, EditPharmacyAction} from "@/context/Features/Actions.js";
 
 
 const formSchema = z.object({
-    att1:z.string().nullable(),
-    att2: z.string().nullable(),
-    att3: z.string().nullable(),
-    att4: z.string().nullable(),
-    name : z.string().nullable(),
+    name:z.string().nullable(),
+    address: z.string().nullable(),
+    garde: z.string().nullable(),
+    operationhours: z.string().nullable(),
 })
 
 
-export const EditTable1 = ({Table1Id}) => {
+export const AddPharmacy = ({PharmacyId}) => {
 
-    const {state , dispatch} = useGlobalContext()
-    console.log(Table1Id)
-    const CurrentTable = state.table1s.find(t => t.id === Table1Id)
+    const GlobalState = useGlobalContext()
+    const dispatch = GlobalState?.dispatch
+
+
     const form = useForm({
         resolver: zodResolver(formSchema),
         defaultValues: {
-            // CIN: CurrentUser?.CIN.toString(),
-            att1: CurrentTable?.att1,
-            att2: CurrentTable?.att2,
-            att3: CurrentTable?.att3,
-            att4: CurrentTable?.att4,
-            name: CurrentTable?.name,
+            name: '',
+            address: '',
+            garde: '',
+            operationhours: '',
         },
     })
 
     const onSubmit = async (values) => {
 
         // GlobalLibrary.ConvertValuesToInteger(values, ['number_of_week', 'average_hours_per_week'])
-        const loading =  toast.loading("updating table in progress...")
-        values['id'] = Table1Id
+        const loading =  toast.loading("adding Pharmacy in progress...")
+
         try {
-            const response = await ActionsApi.EditTable1(values);
-            if(response.status === 200 && response.data.table1)
+            const response = await ActionsApi.AddPharmacy(values);
+            console.log('WAAAAAAAAAAAAAAAAAA')
+            console.log(response)
+            if(response.status === 200 && response?.data?.pharmacy)
             {
-                dispatch(EditTable1Action({table1 : response.data.table1}));
+                dispatch(AddPharmacyAction({pharmacy : response.data.pharmacy}));
                 toast.dismiss(loading)
-                toast.success('table updated successfully')
+                toast.success('table added successfully')
             }else
             {
-                throw new Error("Couldn't add table1 please try again later")
+                throw new Error("Couldn't add Pharmacy please try again later")
             }
 
         }catch (e)
@@ -72,12 +72,12 @@ export const EditTable1 = ({Table1Id}) => {
                         <div className={'md:flex justify-between '}>
                             <FormField
                                 control={form.control}
-                                name="att1"
+                                name="name"
                                 render={({field}) => (
                                     <FormItem className={'md:w-2/5'}>
-                                        <FormLabel>att1</FormLabel>
+                                        <FormLabel>Name</FormLabel>
                                         <FormControl>
-                                            <Input placeholder="att1..." {...field} />
+                                            <Input placeholder="Name..." {...field} />
                                         </FormControl>
                                         <FormMessage/>
 
@@ -86,12 +86,12 @@ export const EditTable1 = ({Table1Id}) => {
                             />
                             <FormField
                                 control={form.control}
-                                name="att2"
+                                name="address"
                                 render={({field}) => (
                                     <FormItem className={'md:w-2/5'}>
-                                        <FormLabel>emaatt2il</FormLabel>
+                                        <FormLabel>Address</FormLabel>
                                         <FormControl>
-                                            <Input placeholder="att2..." {...field} />
+                                            <Input placeholder="Address..." {...field} />
                                         </FormControl>
                                         <FormMessage/>
                                     </FormItem>
@@ -101,12 +101,12 @@ export const EditTable1 = ({Table1Id}) => {
                         <div className={'md:flex justify-between '}>
                             <FormField
                                 control={form.control}
-                                name="att3"
+                                name="operationhours"
                                 render={({field}) => (
                                     <FormItem className={'md:w-2/5'}>
-                                        <FormLabel>att3</FormLabel>
+                                        <FormLabel>Operation Hours</FormLabel>
                                         <FormControl>
-                                            <Input placeholder="att3..." {...field} />
+                                            <Input placeholder="Hours..." {...field} />
                                         </FormControl>
                                         <FormMessage/>
 
@@ -115,19 +115,19 @@ export const EditTable1 = ({Table1Id}) => {
                             />
                             <FormField
                                 control={form.control}
-                                name="att4"
+                                name="garde"
                                 render={({field}) => (
                                     <FormItem className={'md:w-2/5'}>
-                                        <FormLabel>att4</FormLabel>
+                                        <FormLabel>Garde</FormLabel>
                                         <FormControl>
-                                            <Input placeholder="att4..." {...field} />
+                                            <Input placeholder="Garde..." {...field} />
                                         </FormControl>
                                         <FormMessage/>
                                     </FormItem>
                                 )}
                             />
                         </div>
-                        <FormField
+                        {/* <FormField
                             control={form.control}
                             name="name"
                             render={({field}) => (
@@ -139,7 +139,7 @@ export const EditTable1 = ({Table1Id}) => {
                                     <FormMessage/>
                                 </FormItem>
                             )}
-                        />
+                        /> */}
                         {/*<div className={'mt-4'}>*/}
                         {/*    <div className={'md:flex justify-between '}>*/}
                         {/*        <FormField*/}
@@ -261,7 +261,7 @@ export const EditTable1 = ({Table1Id}) => {
 
                     <Button className={'w-full'} type="submit">
 
-                        <span>Edit Table 1</span>
+                        <span>Add Pharmacy</span>
 
                     </Button>
                 </form>
