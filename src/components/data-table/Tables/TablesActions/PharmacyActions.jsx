@@ -30,8 +30,8 @@ import {
 import { useGlobalContext } from "@/context/GlobalState.jsx";
 import { Add } from "@/components/Add.jsx";
 import { ActionsApi } from "@/Services/Actions/ActionsApi.js";
-import { EditUser } from "@/components/Admin/User/EditUser.jsx";
-import { EditPharmacy } from "@/components/Admin/Pharmacy/EditPharmacy.jsx";
+// import { EditUser } from "@/components/Admin/User/EditUser.jsx";
+import EditPharmacy  from "@/components/Admin/Pharmacy/EditPharmacy.jsx";
 
 export const PharmacyActions = ({ PharmacyId }) => {
   const [open, setOpen] = useState(false);

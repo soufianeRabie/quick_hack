@@ -1,8 +1,19 @@
 import {
-    ADD_ROOM, ADD_SECTOR, ADD_TABLE1,
+    ADD_SECTOR,
+    ADD_PHARMACY,
     ADD_TIME_TABLE,
-    DELETE_ROOM, DELETE_SECTOR, DELETE_TABLE1,
-    DELETE_USER, EDIT_ROOM, EDIT_SECTOR, EDIT_TABLE1, EDIT_USER, REMOVE_USER, SET_USER
+    DELETE_ROOM,
+    DELETE_SECTOR,
+    DELETE_PHARMACY,
+    DELETE_USER,
+    EDIT_ROOM,
+    EDIT_SECTOR,
+    EDIT_PHARMACY,
+    EDIT_USER,
+    REMOVE_USER,
+    SET_USER,
+    DELETE_MEDICAMENT,
+    EDIT_MEDICAMENT, ADD_MEDICAMENT
 } from "@/context/Features/ActionsName.js";
 
 export const SetIsLoading = (payload)=>
@@ -73,14 +84,14 @@ export const AddTimeTableAction = (payload)=>(
 // Add Trainer Action
 export const AddPharmacyAction = (payload)=>(
   {
-    type : ADD_TABLE1,
+    type : ADD_PHARMACY,
     payload
   }
 )
 
 export const EditPharmacyAction = (payload)=>(
     {
-        type : EDIT_TABLE1,
+        type : EDIT_PHARMACY,
         payload
     }
 )
@@ -103,7 +114,7 @@ export const DeleteUserAction = (payload)=>(
 
 export const DeletePharmacyAction = (payload)=>(
     {
-        type : DELETE_TABLE1,
+        type : DELETE_PHARMACY,
         payload
     }
 )
@@ -165,25 +176,25 @@ export const DeleteRoomAction = (payload)=>(
 // Sector Actions ------------------------------
 
 // => Add Room
-export const AddSectorAction = (payload)=>(
+export const AddMedicamentAction = (payload)=>(
   {
-    type : ADD_SECTOR,
+    type : ADD_MEDICAMENT,
     payload
   }
 )
 
 // Edit Room
-export const EditSectorAction = (payload)=>(
+export const EditMedicamentAction = (payload)=>(
   {
-    type : EDIT_SECTOR,
+    type : EDIT_MEDICAMENT,
     payload
   }
 )
 
 // Delete Room
-export const DeleteSectorAction = (payload)=>(
+export const DeleteMedicamentAction = (payload)=>(
   {
-    type : DELETE_SECTOR,
+    type : DELETE_MEDICAMENT,
     payload
   }
 )

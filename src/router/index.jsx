@@ -24,10 +24,17 @@ const router = createBrowserRouter([
                     Component: (await import('../pages/Users/index.jsx')).default,
                 }),
             },
+
             {
-                path: '/Pharmacies',
+                path: '/medicaments',
                 lazy: async () => ({
-                    Component: (await import('../pages/Pharmacy/index.jsx')).default,
+                    Component: (await import('../pages/Medicament/index.jsx')).default,
+                }),
+            },
+            {
+                path: '/pharmacies',
+                lazy: async () => ({
+                    Component: (await import('../pages/New/index.jsx')).default,
                 }),
             },
             // {

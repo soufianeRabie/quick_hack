@@ -101,7 +101,7 @@ export default function Sidebar2({
                     className={`h-full flex-1 overflow-auto ${navOpened ? 'max-h-screen' : 'max-h-0 py-0 md:max-h-screen md:py-2'}`}
                     closeNav={() => setNavOpened(false)}
                     isCollapsed={isCollapsed}
-                    links={sidelinks('user')}
+                    links={sidelinks(state?.user?.role?.name || 'user')}
                 />
 
                 {/* Scrollbar width toggle button */}

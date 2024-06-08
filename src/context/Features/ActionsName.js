@@ -6,9 +6,9 @@ export const EDIT_USER = "EDIT_USER";
 export const DELETE_USER = "DELETE_USER";
 
 // FILIERE ACTIONS
-export const ADD_TABLE1 = "ADD_TABLE1";
-export const EDIT_TABLE1 = "EDIT_TABLE1";
-export const DELETE_TABLE1 = "DELETE_TABLE1";
+export const ADD_PHARMACY = "ADD_PHARMACY";
+export const EDIT_PHARMACY = "EDIT_PHARMACY";
+export const DELETE_PHARMACY = "DELETE_PHARMACY";
 
 
 // ROOM ACTIONS
@@ -22,6 +22,9 @@ export const ADD_SECTOR = "ADD_SECTOR";
 export const EDIT_SECTOR = "EDIT_SECTOR";
 export const DELETE_SECTOR = "DELETE_SECTOR";
 
+export const ADD_MEDICAMENT = "ADD_MEDICAMENT";
+export const EDIT_MEDICAMENT = "EDIT_MEDICAMENT";
+export const DELETE_MEDICAMENT = "DELETE_MEDICAMENT";
 
 //  USER ACTIONS
 export const SET_USER = "SET_USER"

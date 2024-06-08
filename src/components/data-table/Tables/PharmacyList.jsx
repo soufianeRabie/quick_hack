@@ -2,9 +2,9 @@ import { DataTable } from "../DataTable.jsx";
 import { useEffect, useState } from "react";
 import { DataTableColumnHeader } from "../DataTableColumnHeader.jsx";
 import { useGlobalContext } from "@/context/GlobalState.jsx";
-import { UserActions } from "@/components/data-table/Tables/TablesActions/UserActions.jsx";
-import { AddPharmacy } from "@/components/Admin/Pharmacy/AddPharmacy.jsx";
-import { PharmacyActions } from "@/components/data-table/Tables/TablesActions/PharmacyActions.jsx";
+import {PharmacyActions} from "@/components/data-table/Tables/TablesActions/PharmacyActions.jsx";
+// import { UserActions } from "@/components/data-table/Tables/TablesActions/UserActions.jsx";
+import AddPharmacy  from "@/components/Admin/Pharmacy/AddPharmacy.jsx";
 
 export default function PharmacyList() {
   const { state, dispatch } = useGlobalContext();
@@ -35,13 +35,6 @@ export default function PharmacyList() {
         return <DataTableColumnHeader column={column} title="En Garde ?" />;
       },
     },
-    // {
-    // accessorKey: 'att4',
-    // header: ({ column }) => {
-    //     return <DataTableColumnHeader column={column} title="att4" />
-    // },
-    // },
-
     {
       id: "actions",
       cell: ({ row }) => {
@@ -56,6 +49,7 @@ export default function PharmacyList() {
     },
   ];
   useEffect(() => {
+    console.log(state.pharmacies)
     if (state.pharmacies) {
       {
           console.log(state.pharmacies);
@@ -68,7 +62,6 @@ export default function PharmacyList() {
 
   return (
     <>
-      <>
         <DataTable
           columns={AdminTrainerColumns}
           data={data}
@@ -77,7 +70,6 @@ export default function PharmacyList() {
           filterBy={"att1"}
           messageFilter={"filter by ...."}
         />
-      </>
     </>
   );
 }

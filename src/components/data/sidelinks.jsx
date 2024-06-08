@@ -21,8 +21,23 @@ export const GlobalSideLinks = [
     href: 'pharmacies',
     icon: <IconChecklist size={18} />,
   },
+  {
+    title: 'medicaments',
+    label: '3',
+    href: 'medicaments',
+    icon: <IconChecklist size={18} />,
+  },
 ]
 
+
+export const EngagedSideLinks = [
+  {
+    title: 'events',
+    label: '3',
+    href: 'events',
+    icon: <IconChecklist size={18} />,
+  },
+]
 
 export const SuperAdminSideLinks = [
   {
@@ -125,6 +140,11 @@ export const sidelinks =  (role)=>
     case 'superAdmin':
       return [GlobalSideLinks , SuperAdminSideLinks].flat()
     case 'user':
+      return GlobalSideLinks
+    case 'engaged':
+      return EngagedSideLinks
+
+    default :
       return GlobalSideLinks
   }
 }

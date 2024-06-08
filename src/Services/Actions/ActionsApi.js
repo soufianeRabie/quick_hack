@@ -1,5 +1,5 @@
 import axiosConfig from "@/Services/axios/axiosConfig.js";
-import { AddPharmacy } from "../../components/Admin/Pharmacy/AddPharmacy";
+// import { AddPharmacy } from "../../components/Admin/Pharmacy/AddPharmacy";
 
 export const ActionsApi = {
   login: async (data) => {
@@ -8,17 +8,20 @@ export const ActionsApi = {
   getUser: async () => {
     return await axiosConfig.get("/api/me");
   },
-  AddGroup: async (group) => {
-    return await axiosConfig.post("/api/add_group", group);
+  AddMedicament: async (medicament) => {
+    return await axiosConfig.post("/api/medicaments", medicament);
   },
   AddTrainer: async (trainer) => {
     return await axiosConfig.post("/api/trainers", trainer);
   },
   AddPharmacy: async (table) => {
-    return await axiosConfig.post("/api/new-pharmacy", table);
+    return await axiosConfig.post("/api/pharmacies", table);
   },
   EditUser: async (user) => {
     return await axiosConfig.put("/api/users/" + user?.id, user);
+  },
+  EditMedicament: async (medicament) => {
+    return await axiosConfig.put("/api/medicaments/" + medicament?.id, medicament);
   },
   EditPharmacy: async (pharmacies) => {
     return await axiosConfig.put(
@@ -26,8 +29,8 @@ export const ActionsApi = {
       pharmacies
     );
   },
-  DeleteTrainer: async (trainerId) => {
-    return await axiosConfig.delete("/api/trainers/" + trainerId);
+  DeleteMedicament: async (medicamentId) => {
+    return await axiosConfig.delete("/api/medicaments/" + medicamentId);
   },
   DeleteUser: async (userId) => {
     return await axiosConfig.delete("/api/users/" + userId);

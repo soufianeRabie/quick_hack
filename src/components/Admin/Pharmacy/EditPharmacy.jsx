@@ -38,7 +38,7 @@ const formSchema = z.object({
   operationhours: z.string().nullable(),
 });
 
-export const EditPharmacy = ({ PharmacyId }) => {
+ const EditPharmacy = ({ PharmacyId }) => {
     console.log(PharmacyId);
   const { state, dispatch } = useGlobalContext();
   console.log(PharmacyId);
@@ -62,7 +62,7 @@ export const EditPharmacy = ({ PharmacyId }) => {
     try {
       const response = await ActionsApi.EditPharmacy(values);
       if (response.status === 200 && response.data.pharmacy) {
-        dispatch(EditPharmacyAction({ table1: response.data.pharmacy }));
+        dispatch(EditPharmacyAction({ pharmacy: response.data.pharmacy }));
         toast.dismiss(loading);
         toast.success("Pharmacy updated successfully");
       } else {
@@ -146,117 +146,6 @@ export const EditPharmacy = ({ PharmacyId }) => {
                 </FormItem>
               )}
             />
-            {/*<div className={'mt-4'}>*/}
-            {/*    <div className={'md:flex justify-between '}>*/}
-            {/*        <FormField*/}
-            {/*            control={form.control}*/}
-            {/*            name="CIN"*/}
-            {/*            render={({field}) => (*/}
-            {/*                <FormItem className={'md:w-2/5'}>*/}
-            {/*                    <FormLabel>CIN</FormLabel>*/}
-            {/*                    <FormControl>*/}
-            {/*                        <Input placeholder="CIN" {...field} />*/}
-            {/*                    </FormControl>*/}
-            {/*                    <FormMessage/>*/}
-            {/*                </FormItem>*/}
-            {/*            )}*/}
-            {/*        />*/}
-            {/*        <FormField*/}
-            {/*            control={form.control}*/}
-            {/*            name="number_of_week"*/}
-            {/*            render={({field}) => (*/}
-            {/*                <FormItem className={'md:w-2/5'}>*/}
-            {/*                    <FormLabel>number_of_week</FormLabel>*/}
-            {/*                    <FormControl>*/}
-            {/*                        <Input placeholder="number_of_week..." {...field} />*/}
-            {/*                    </FormControl>*/}
-            {/*                    <FormMessage/>*/}
-            {/*                </FormItem>*/}
-            {/*            )}*/}
-            {/*        />*/}
-            {/*    </div>*/}
-            {/*</div>*/}
-            {/*<FormField*/}
-            {/*    control={form.control}*/}
-            {/*    name="average_hours_per_week"*/}
-            {/*    render={({field}) => (*/}
-            {/*        <FormItem>*/}
-            {/*            <FormLabel>average_hours_per_week </FormLabel>*/}
-            {/*            <FormControl>*/}
-            {/*                <Input placeholder="average_hours_per_week" {...field} />*/}
-            {/*            </FormControl>*/}
-            {/*            <FormMessage/>*/}
-            {/*        </FormItem>*/}
-            {/*    )}*/}
-            {/*/>*/}
-            {/*<FormField*/}
-            {/*    control={form.control}*/}
-            {/*    name="password"*/}
-            {/*    render={({field}) => (*/}
-            {/*        <FormItem>*/}
-            {/*            <FormLabel>Password</FormLabel>*/}
-            {/*            <FormControl>*/}
-            {/*                <Input*/}
-            {/*                    type={'password'}*/}
-            {/*                    placeholder="***************"*/}
-            {/*                    {...field}*/}
-            {/*                />*/}
-            {/*            </FormControl>*/}
-            {/*            <FormMessage/>*/}
-            {/*        </FormItem>*/}
-            {/*    )}*/}
-            {/*/>*/}
-            {/*<div className={'mt-4'}>*/}
-            {/*    <div className={'md:flex justify-between '}>*/}
-            {/*        <FormField*/}
-            {/*            control={form.control}*/}
-            {/*            name="field"*/}
-            {/*            render={({field}) => (*/}
-            {/*                <FormItem className={'md:w-2/5'}>*/}
-            {/*                    <FormLabel>field</FormLabel>*/}
-            {/*                    <Select onValueChange={field.onChange} defaultValue={field.value}>*/}
-            {/*                        <FormControl>*/}
-            {/*                            <SelectTrigger>*/}
-            {/*                                <SelectValue placeholder="Select a sector"/>*/}
-            {/*                            </SelectTrigger>*/}
-            {/*                        </FormControl>*/}
-            {/*                        <SelectContent>*/}
-            {/*                            {Fields.map((sector, key) => {*/}
-            {/*                                return (*/}
-            {/*                                    <SelectItem key={key} value={sector}>{sector}</SelectItem>*/}
-            {/*                                )*/}
-            {/*                            })}*/}
-            {/*                        </SelectContent>*/}
-            {/*                    </Select>*/}
-            {/*                    <FormMessage/>*/}
-            {/*                </FormItem>*/}
-            {/*            )}*/}
-            {/*        />*/}
-
-            {/*        <FormField*/}
-            {/*            control={form.control}*/}
-            {/*            name="FP_FV"*/}
-            {/*            render={({field}) => (*/}
-            {/*                <FormItem className={'md:w-2/5'}>*/}
-            {/*                    <FormLabel>FP_FV</FormLabel>*/}
-            {/*                    <Select onValueChange={field.onChange} defaultValue={field.value}>*/}
-            {/*                        <FormControl>*/}
-            {/*                            <SelectTrigger>*/}
-            {/*                                <SelectValue placeholder="Select type of formation"/>*/}
-            {/*                            </SelectTrigger>*/}
-            {/*                        </FormControl>*/}
-            {/*                        <SelectContent>*/}
-            {/*                            <SelectItem value={"FP"}>FP</SelectItem>*/}
-            {/*                            <SelectItem value={"FV"}>FV</SelectItem>*/}
-            {/*                        </SelectContent>*/}
-            {/*                    </Select>*/}
-            {/*                    <FormMessage/>*/}
-            {/*                </FormItem>*/}
-            {/*            )}*/}
-            {/*        />*/}
-
-            {/*</div>*/}
-            {/*</div>*/}
           </div>
 
           <div className={"md:flex justify-between "}></div>
@@ -269,3 +158,6 @@ export const EditPharmacy = ({ PharmacyId }) => {
     </div>
   );
 };
+
+
+ export default EditPharmacy
