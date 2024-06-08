@@ -18,9 +18,9 @@ export const DELETE_ROOM = "DELETE_ROOM";
 
 
 // SECTOR ACTIONS
-export const ADD_SECTOR = "ADD_SECTOR";
-export const EDIT_SECTOR = "EDIT_SECTOR";
-export const DELETE_SECTOR = "DELETE_SECTOR";
+export const ADD_EVENT = "ADD_EVENT";
+export const EDIT_EVENT = "EDIT_EVENT";
+export const DELETE_EVENT = "DELETE_EVENT";
 
 export const ADD_MEDICAMENT = "ADD_MEDICAMENT";
 export const EDIT_MEDICAMENT = "EDIT_MEDICAMENT";

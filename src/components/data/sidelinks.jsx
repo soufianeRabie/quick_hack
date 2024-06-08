@@ -50,6 +50,12 @@ export const AdminSideLinks = [
     href: '/',
     icon: <IconLayoutDashboard size={18} />,
   },
+  {
+    title: 'events',
+    label: '3',
+    href: 'events',
+    icon: <IconChecklist size={18} />,
+  },
   // {
   //     title: 'Filieres',
   //     label: '3',

@@ -1,13 +1,13 @@
 import {
-    ADD_SECTOR,
+    ADD_EVENT,
     ADD_PHARMACY,
     ADD_TIME_TABLE,
     DELETE_ROOM,
-    DELETE_SECTOR,
+    DELETE_EVENT,
     DELETE_PHARMACY,
     DELETE_USER,
     EDIT_ROOM,
-    EDIT_SECTOR,
+    EDIT_EVENT,
     EDIT_PHARMACY,
     EDIT_USER,
     REMOVE_USER,
@@ -149,28 +149,28 @@ export const DeletePharmacyAction = (payload)=>(
 // Room Actions ------------------------------
 
 // => Add Room
-export const AddRoomAction = (payload)=>(
-  {
-    type : ADD_ROOM,
-    payload
-  }
-)
+// export const AddRoomAction = (payload)=>(
+//   {
+//     type : ADD_ROOM,
+//     payload
+//   }
+// )
 
 // Edit Room
-export const EditRoomAction = (payload)=>(
-  {
-    type : EDIT_ROOM,
-    payload
-  }
-)
+// export const EditRoomAction = (payload)=>(
+//   {
+//     type : EDIT_ROOM,
+//     payload
+//   }
+// )
 
 // Delete Room
-export const DeleteRoomAction = (payload)=>(
-  {
-    type : DELETE_ROOM,
-    payload
-  }
-)
+// export const DeleteRoomAction = (payload)=>(
+//   {
+//     type : DELETE_ROOM,
+//     payload
+//   }
+// )
 
 
 // Sector Actions ------------------------------
@@ -212,3 +212,29 @@ export const RemoveUserAction = ()=>
     type : REMOVE_USER,
   })
 
+
+
+// EVENTSS
+
+export const AddEventAction = (payload)=>(
+    {
+        type : ADD_EVENT,
+        payload
+    }
+)
+
+// Edit Room
+export const EditEventAction = (payload)=>(
+    {
+        type : EDIT_EVENT,
+        payload
+    }
+)
+
+// Delete Room
+export const DeleteEventAction = (payload)=>(
+    {
+        type : DELETE_EVENT,
+        payload
+    }
+)

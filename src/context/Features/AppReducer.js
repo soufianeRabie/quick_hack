@@ -1,9 +1,9 @@
 import {
   ADD_MEDICAMENT,
-  ADD_SECTOR, ADD_PHARMACY,
+  ADD_EVENT, ADD_PHARMACY,
   ADD_TIME_TABLE,
-  ADD_TRAINER, DELETE_SECTOR, DELETE_PHARMACY,
-  DELETE_USER, EDIT_SECTOR, EDIT_PHARMACY,
+  ADD_TRAINER, DELETE_EVENT, DELETE_PHARMACY,
+  DELETE_USER, EDIT_EVENT, EDIT_PHARMACY,
   EDIT_USER, REMOVE_USER, SET_USER, DELETE_MEDICAMENT, EDIT_MEDICAMENT
 } from "@/context/Features/ActionsName.js";
 
@@ -13,7 +13,7 @@ export const initialState = {
     users : [],
     table1s:[],
     table2s:[],
-    rooms:[],
+    events:[],
     filieres:[],
     levels:[],
     sectors:[],
@@ -50,6 +50,7 @@ export const initialState = {
         table1s: action.payload.table1s,
         medicaments: action.payload.medicaments,
         pharmacies : action.payload.pharmacies,
+        events: action.payload.events,
         // table2s:  action.payload.table2s,
         // filieres:  action.payload.filieres,
         // sectors: action.payload.sectors,
@@ -251,19 +252,19 @@ export const initialState = {
 
     // --------------------- SECTOR ACTIONS --------------------
 
-    case ADD_SECTOR:
+    case ADD_EVENT:
       return {...state ,
-        sectors: [action.payload.sector , ...state.sectors]
+        events: [action.payload.event , ...state.events]
       }
-    case EDIT_SECTOR:
-      const sector = action.payload.sector
-      return {...state , sectors:
-          state.sectors.map((sc)=>sc.id === sector.id? sector : sc  )
+    case EDIT_EVENT:
+      const event = action.payload.event
+      return {...state , events:
+          state.events.map((sc)=>sc.id === event.id? event : sc  )
       }
 
-    case DELETE_SECTOR :
-      return {...state , sectors:
-          state.sectors.filter((sc)=>sc.id !==action.payload.id )
+    case DELETE_EVENT :
+      return {...state , events:
+          state.events.filter((sc)=>sc.id !==action.payload.id )
       }
     default :
       return state

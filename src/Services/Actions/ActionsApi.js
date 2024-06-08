@@ -11,6 +11,12 @@ export const ActionsApi = {
   AddMedicament: async (medicament) => {
     return await axiosConfig.post("/api/medicaments", medicament);
   },
+  ValidateEvent : async (id) => {
+    return await axiosConfig.put("/api/event/valid/" + id)
+  },
+  AddEvent: async (event) => {
+    return await axiosConfig.post("/api/events", event);
+  },
   AddTrainer: async (trainer) => {
     return await axiosConfig.post("/api/trainers", trainer);
   },
@@ -19,6 +25,12 @@ export const ActionsApi = {
   },
   EditUser: async (user) => {
     return await axiosConfig.put("/api/users/" + user?.id, user);
+  },
+  DeleteEvent: async (eventId) => {
+    return await axiosConfig.delete("/api/events/" + eventId);
+  },
+  EditEvent: async (event) => {
+    return await axiosConfig.put("/api/events/" + event?.id, event);
   },
   EditMedicament: async (medicament) => {
     return await axiosConfig.put("/api/medicaments/" + medicament?.id, medicament);

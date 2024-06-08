@@ -20,10 +20,10 @@ import {
 import {toast} from "sonner";
 import {CatchAction} from "@/Library/index.jsx";
 import {useGlobalContext} from "@/context/GlobalState.jsx";
-import {EditMedicament} from "@/components/Admin/Medicaments/EditMedicament.jsx";
 import {ActionsApi} from "@/Services/Actions/ActionsApi.js";
 import {DeleteMedicamentAction} from "@/context/Features/Actions.js";
 import {Add} from "@/components/Add.jsx";
+import {EditMedicament} from "@/components/Admin/Medicaments/EditMedicament.jsx";
 
 export const MedicamentAction = ({medicamentId}) => {
 

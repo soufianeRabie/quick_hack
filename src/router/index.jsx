@@ -37,6 +37,12 @@ const router = createBrowserRouter([
                     Component: (await import('../pages/New/index.jsx')).default,
                 }),
             },
+            {
+                path: '/events',
+                lazy: async () => ({
+                    Component: (await import('../pages/Event/index.jsx')).default,
+                }),
+            },
             // {
             //     path: '/groups',
             //     lazy: async () => ({
