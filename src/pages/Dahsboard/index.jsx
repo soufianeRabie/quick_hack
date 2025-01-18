@@ -8,6 +8,7 @@ import {
 } from '../../components/ui/card'
 import { Search } from '../../components/search'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/tabs'
+import { useGlobalContext } from "@/context/GlobalState.jsx";
 import { TopNav } from '../../components/top-nav'
 import { UserNav } from '../../components/user-nav'
 import { Layout, LayoutBody, LayoutHeader } from '../../components/custom/layout'
@@ -16,6 +17,11 @@ import { Overview } from './components/overview.jsx'
 import ThemeSwitch from "../../components/theme-switch.jsx";
 
 export default function Dashboard() {
+
+     const state = useGlobalContext()
+
+    console.log('this is the state')
+    console.log(state);
     return (
         <Layout>
             {/* ===== Top Heading ===== */}
