@@ -2,7 +2,57 @@ import axiosConfig from "@/Services/axios/axiosConfig.js";
 // import { AddPharmacy } from "../../components/Admin/Pharmacy/AddPharmacy";
 
 export const ActionsApi = {
+
+
+  getLignesBudgetaires: async () => {
+    return await axiosConfig.get("/api/ligne-budgetaires");
+  },
+  addLigneBudgetaire: async (ligneBudgetaire) => {
+    return await axiosConfig.post("/api/ligne-budgetaires", ligneBudgetaire);
+  },
+  updateLigneBudgetaire: async (id, ligneBudgetaire) => {
+    return await axiosConfig.put(`/api/ligne-budgetaires/${id}`, ligneBudgetaire);
+  },
+  deleteLigneBudgetaire: async (id) => {
+    return await axiosConfig.delete(`/api/ligne-budgetaires/${id}`);
+  },
+
+
+  addbudgetairesPlafond: async (data , id) => {
+    return await axiosConfig.post(`/ligne-budgetaires/${id}/plafonds`, data);
+  },
+  // Expense Types
+  getExpenseTypes: async () => {
+    return await axiosConfig.get("/api/expense-types");
+  },
+  addExpenseType: async (expenseType) => {
+    return await axiosConfig.post("/api/expense-types", expenseType);
+  },
+  updateExpenseType: async (id, expenseType) => {
+    return await axiosConfig.put(`/api/expense-types/${id}`, expenseType);
+  },
+  deleteExpenseType: async (id) => {
+    return await axiosConfig.delete(`/api/expense-types/${id}`);
+  },
+
+  // Dep Marche
+  getDepMarches: async () => {
+    return await axiosConfig.get("/api/dep-marches");
+  },
+  addDepMarche: async (depMarche) => {
+    return await axiosConfig.post("/api/dep-marches", depMarche);
+  },
+  updateDepMarche: async (id, depMarche) => {
+    return await axiosConfig.put(`/api/dep-marches/${id}`, depMarche);
+  },
+  deleteDepMarche: async (id) => {
+    return await axiosConfig.delete(`/api/dep-marches/${id}`);
+  },
+
+
+
   login: async (data) => {
+
     return await axiosConfig.post("/api/login", data);
   },
   getUser: async () => {

@@ -43,6 +43,18 @@ const router = createBrowserRouter([
                     Component: (await import('../pages/Event/index.jsx')).default,
                 }),
             },
+            {
+                path: '/DEP_MARCHE',
+                lazy: async () => ({
+                    Component: (await import('../pages/DEPMARCHES/index.jsx')).default,
+                }),
+            },
+            {
+                path: '/Budget_Manager',
+                lazy: async () => ({
+                    Component: (await import('../pages/Budget/index.jsx')).default,
+                }),
+            },
             // {
             //     path: '/groups',
             //     lazy: async () => ({

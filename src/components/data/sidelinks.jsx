@@ -9,18 +9,19 @@ export const GlobalSideLinks = [
     href: 'manageUsers',
     icon: <IconChecklist size={18} />,
   },
-  {
-    title: 'Pharmacies',
-    label: '3',
-    href: 'pharmacies',
-    icon: <IconChecklist size={18} />,
-  },
-  {
-    title: 'medicaments',
-    label: '3',
-    href: 'medicaments',
-    icon: <IconChecklist size={18} />,
-  },
+  // {
+  //   title: 'Pharmacies',
+  //   label: '3',
+  //   href: 'pharmacies',
+  //   icon: <IconChecklist size={18} />,
+  // },
+  //
+  // {
+  //   title: 'medicaments',
+  //   label: '3',
+  //   href: 'medicaments',
+  //   icon: <IconChecklist size={18} />,
+  // },
 ]
 
 
@@ -50,12 +51,25 @@ export const AdminSideLinks = [
     href: '/',
     icon: <IconLayoutDashboard size={18} />,
   },
-  {
-    title: 'events',
-    label: '3',
-    href: 'events',
-    icon: <IconChecklist size={18} />,
-  },
+  // {
+  //   title: 'events',
+  //   label: '3',
+  //   href: 'events',
+  //   icon: <IconChecklist size={18} />,
+  // },
+
+    {
+        title: 'DEPESNES',
+        label: '3',
+        href: 'DEP_MARCHE',
+        icon: <IconChecklist size={18} />,
+    },
+    {
+        title: 'budget Manager',
+        label: '3',
+        href: 'Budget_Manager',
+        icon: <IconChecklist size={18} />,
+    },
   // {
   //     title: 'Filieres',
   //     label: '3',
@@ -68,12 +82,12 @@ export const AdminSideLinks = [
   //     href: 'sectors',
   //     icon: <IconChecklist size={18} />,
   // },
-  {
-    title: 'modules',
-    label: '3',
-    href: 'modules',
-    icon: <IconChecklist size={18} />,
-  },
+  // {
+  //   title: 'modules',
+  //   label: '3',
+  //   href: 'modules',
+  //   icon: <IconChecklist size={18} />,
+  // },
 ]
 export const sidelinks =  (role)=>
 {
