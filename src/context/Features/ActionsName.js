@@ -10,6 +10,11 @@ export const ADD_PHARMACY = "ADD_PHARMACY";
 export const EDIT_PHARMACY = "EDIT_PHARMACY";
 export const DELETE_PHARMACY = "DELETE_PHARMACY";
 
+export const ADD_DEP_MARCHE = "ADD_PHARMACY";
+export const EDIT_DEP_MARCHE = "EDIT_PHARMACY";
+export const DELETE_DEP_MARCHE = "DELETE_PHARMACY";
+
+
 
 // ROOM ACTIONS
 export const ADD_ROOM = "ADD_ROOM";

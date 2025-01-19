@@ -10,6 +10,9 @@ import {
 
 export const initialState = {
     user: null,
+  lignes_budgetaire: [], // Added for budget lines
+  dep_marche: [], // Added for expenses
+  expense_types: [], // Added for expense types linked to budget lines
     users : [],
     table1s:[],
     lignes_budgetaire:[],
@@ -49,6 +52,9 @@ export const initialState = {
 
       return {...state ,
         table1s: action.payload.table1s,
+        lignes_budgetaire: action.payload.lignes_budgetaire || [],
+        dep_marche: action.payload.dep_marche || [],
+        expense_types: action.payload.expense_types || [],
         medicaments: action.payload.medicaments,
         pharmacies : action.payload.pharmacies,
         events: action.payload.events,

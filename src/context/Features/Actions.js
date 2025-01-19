@@ -1,19 +1,19 @@
 import {
-    ADD_EVENT,
-    ADD_PHARMACY,
-    ADD_TIME_TABLE,
-    DELETE_ROOM,
-    DELETE_EVENT,
-    DELETE_PHARMACY,
-    DELETE_USER,
-    EDIT_ROOM,
-    EDIT_EVENT,
-    EDIT_PHARMACY,
-    EDIT_USER,
-    REMOVE_USER,
-    SET_USER,
-    DELETE_MEDICAMENT,
-    EDIT_MEDICAMENT, ADD_MEDICAMENT
+  ADD_EVENT,
+  ADD_PHARMACY,
+  ADD_TIME_TABLE,
+  DELETE_ROOM,
+  DELETE_EVENT,
+  DELETE_PHARMACY,
+  DELETE_USER,
+  EDIT_ROOM,
+  EDIT_EVENT,
+  EDIT_PHARMACY,
+  EDIT_USER,
+  REMOVE_USER,
+  SET_USER,
+  DELETE_MEDICAMENT,
+  EDIT_MEDICAMENT, ADD_MEDICAMENT, DELETE_DEP_MARCHE, EDIT_DEP_MARCHE, ADD_DEP_MARCHE
 } from "@/context/Features/ActionsName.js";
 
 export const SetIsLoading = (payload)=>
@@ -108,6 +108,20 @@ export const EditPharmacyAction = (payload)=>(
     }
 )
 
+export const AddDepMarcheAction = (payload)=>(
+  {
+    type : ADD_DEP_MARCHE,
+    payload
+  }
+)
+
+export const EditDepMarcheAction = (payload)=>(
+  {
+    type : EDIT_DEP_MARCHE,
+    payload
+  }
+)
+
 // Edit Trainer
 export const EditUserAction = (payload)=>(
   {
@@ -120,6 +134,13 @@ export const EditUserAction = (payload)=>(
 export const DeleteUserAction = (payload)=>(
   {
     type : DELETE_USER,
+    payload
+  }
+)
+
+export const DeleteDepMarcheAction = (payload)=>(
+  {
+    type : DELETE_DEP_MARCHE,
     payload
   }
 )

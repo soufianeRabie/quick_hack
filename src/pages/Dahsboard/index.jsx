@@ -15,6 +15,7 @@ import { Layout, LayoutBody, LayoutHeader } from '../../components/custom/layout
 import { RecentSales } from './components/recent-sales.jsx'
 import { Overview } from './components/overview.jsx'
 import ThemeSwitch from "../../components/theme-switch.jsx";
+import AddDepMarcheTab from "@/pages/Dahsboard/components/AddDepMarcheTab.jsx";
 
 export default function Dashboard() {
 
@@ -54,9 +55,12 @@ export default function Dashboard() {
                             <TabsTrigger value='overview'>Overview</TabsTrigger>
                             <TabsTrigger value='analytics'>Analytics</TabsTrigger>
                             <TabsTrigger value='reports'>Reports</TabsTrigger>
-                            <TabsTrigger value='notifications'>Notifications</TabsTrigger>
+                            <TabsTrigger value='depenses'>depenses</TabsTrigger>
                         </TabsList>
                     </div>
+                    <TabsContent value={'depenses'} className={'space-y-4'}>
+                        <AddDepMarcheTab />
+                    </TabsContent>
                     <TabsContent value='overview' className='space-y-4'>
                         <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-4'>
                             <Card>
@@ -75,7 +79,7 @@ export default function Dashboard() {
                                         className='h-4 w-4 text-muted-foreground'
                                     >
                                         <path d='M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6' />
-                                    </svg>
+                                        </svg>
                                 </CardHeader>
                                 <CardContent>
                                     <div className='text-2xl font-bold'>$45,231.89</div>
