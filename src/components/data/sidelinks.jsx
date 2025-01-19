@@ -15,6 +15,14 @@ export const GlobalSideLinks = [
     href: 'pharmacies',
     icon: <IconChecklist size={18} />,
   },
+
+  {
+    title: 'Ligne Budgetaire',  
+    label: '3',
+    href: 'ligne-budgetaire',  
+    icon: <IconChecklist size={18} />,
+  },
+
   {
     title: 'medicaments',
     label: '3',
