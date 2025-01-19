@@ -58,6 +58,18 @@ export const AddSeance = (payload)=>(
     payload
   }
 )
+export const AddBudgetaireAction = (payload)=>(
+  {
+    type : 'Add_Budgetaire',
+    payload
+  }
+)
+export const EditLigneBudgetaireAction = (payload)=>(
+  {
+    type : 'Edit_Budgetaire',
+    payload
+  }
+)
 export const DeleteSeance = (payload)=>(
   {
     type : 'DELETE_SEANCE',

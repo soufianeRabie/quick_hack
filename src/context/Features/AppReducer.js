@@ -15,6 +15,7 @@ export const initialState = {
   expense_types: [], // Added for expense types linked to budget lines
     users : [],
     table1s:[],
+    lignes_budgetaire:[],
     table2s:[],
     events:[],
     filieres:[],
@@ -57,6 +58,8 @@ export const initialState = {
         medicaments: action.payload.medicaments,
         pharmacies : action.payload.pharmacies,
         events: action.payload.events,
+        lignes_budgetaire: action.payload.lignes_budgetaire,
+
         // table2s:  action.payload.table2s,
         // filieres:  action.payload.filieres,
         // sectors: action.payload.sectors,

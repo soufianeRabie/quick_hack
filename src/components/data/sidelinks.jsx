@@ -9,6 +9,23 @@ export const GlobalSideLinks = [
     href: 'manageUsers',
     icon: <IconChecklist size={18} />,
   },
+
+  {
+    title: 'Pharmacies',
+    label: '3',
+    href: 'pharmacies',
+    icon: <IconChecklist size={18} />,
+  },
+
+  {
+    title: 'Ligne Budgetaire',  
+    label: '3',
+    href: 'ligne-budgetaire',  
+    icon: <IconChecklist size={18} />,
+  },
+
+  git push --set-upstream origin wallet
+
   // {
   //   title: 'Pharmacies',
   //   label: '3',
@@ -21,7 +38,7 @@ export const GlobalSideLinks = [
   //   label: '3',
   //   href: 'medicaments',
   //   icon: <IconChecklist size={18} />,
-  // },
+
 ]
 
 

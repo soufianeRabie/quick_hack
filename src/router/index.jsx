@@ -31,6 +31,14 @@ const router = createBrowserRouter([
                     Component: (await import('../pages/Medicament/index.jsx')).default,
                 }),
             },
+
+            {
+                path: '/ligne-budgetaire',  // Renamed to match the previous naming
+                lazy: async () => ({
+                    Component: (await import('../pages/LigneBudgetaire/index.jsx')).default,
+                }),
+            },
+
             {
                 path: '/pharmacies',
                 lazy: async () => ({
