@@ -49,7 +49,7 @@ export const EngagedSideLinks = [
   //   href: 'events',
   //   icon: <IconChecklist size={18} />,
   // },
-]g
+]
 
 export const SuperAdminSideLinks = [
   {
