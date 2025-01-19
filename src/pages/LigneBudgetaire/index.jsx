@@ -1,6 +1,6 @@
 import  LigneBudgetaireList from "@/components/data-table/Tables/LigneBudgetaireList.jsx";
 
- function Table1() {
+ function Index() {
      return (
         <div>
             < LigneBudgetaireList/>
@@ -8,4 +8,4 @@ import  LigneBudgetaireList from "@/components/data-table/Tables/LigneBudgetaire
     );
  }
 
- export default Table1;
+ export default Index;

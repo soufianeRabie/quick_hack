@@ -1,13 +1,11 @@
-import React from 'react';
-import MedicamentList from "@/components/data-table/Tables/MedicamentList.jsx";
+import  LigneBudgetaireList from "@/components/data-table/Tables/LigneBudgetaireList.jsx";
 
-function MedicamentTable() {
+function Index() {
     return (
         <div>
-
-            <MedicamentList/>
+            < LigneBudgetaireList/>
         </div>
     );
 }
 
-export default MedicamentTable;
+export default Index;

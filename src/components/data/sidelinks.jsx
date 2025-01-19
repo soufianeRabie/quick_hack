@@ -10,21 +10,21 @@ export const GlobalSideLinks = [
     icon: <IconChecklist size={18} />,
   },
 
-  {
-    title: 'Pharmacies',
-    label: '3',
-    href: 'pharmacies',
-    icon: <IconChecklist size={18} />,
-  },
+  // {
+  //   title: 'Pharmacies',
+  //   label: '3',
+  //   href: 'pharmacies',
+  //   icon: <IconChecklist size={18} />,
+  // },
 
   {
     title: 'Ligne Budgetaire',  
     label: '3',
-    href: 'ligne-budgetaire',  
+    href: 'ligne_budgetaire',
     icon: <IconChecklist size={18} />,
   },
 
-  git push --set-upstream origin wallet
+
 
   // {
   //   title: 'Pharmacies',
@@ -43,13 +43,13 @@ export const GlobalSideLinks = [
 
 
 export const EngagedSideLinks = [
-  {
-    title: 'events',
-    label: '3',
-    href: 'events',
-    icon: <IconChecklist size={18} />,
-  },
-]
+  // {
+  //   title: 'events',
+  //   label: '3',
+  //   href: 'events',
+  //   icon: <IconChecklist size={18} />,
+  // },
+]g
 
 export const SuperAdminSideLinks = [
   {

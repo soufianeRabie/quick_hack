@@ -3,7 +3,9 @@ import { useEffect, useState } from "react";
 import { DataTableColumnHeader } from "../DataTableColumnHeader.jsx";
 import { useGlobalContext } from "@/context/GlobalState.jsx";
 import { LigneBudgetaireAction } from "@/components/data-table/Tables/TablesActions/LigneBudgetaireAction.jsx";
-import AddLigneBudgetaire from "@/components/Admin/LigneBudgetaire/AddLigneBudgetaire.jsx";
+// import {AddLigneBudgetaire} from "@/components/Admin/LigneBudgetaire/AddLigneBudgetaire.jsx";
+// import {AddLigneBudgetaire} from "@/components/Admin/LigneBudgetaire/AddLigneBudgetaire.jsx";
+// import AddLigneBudgetaire from "@/components/Admin/LigneBudgetaire/AddLigneBudgetaire.jsx";
 
 export default function LigneBudgetaireList() {
   const { state, dispatch } = useGlobalContext();
@@ -82,7 +84,7 @@ export default function LigneBudgetaireList() {
         columns={LigneBudgetaireColumns}
         data={data}
         name={"Ligne Budgetaires"}
-        addAction={(setOpen) => <AddLigneBudgetaire setOpen={setOpen} />}
+        // addAction={(setOpen) => <AddLigneBudgetaire setOpen={setOpen} />}
         filterBy={"name"}
         messageFilter={"Filter by name or expense type..."}
       />

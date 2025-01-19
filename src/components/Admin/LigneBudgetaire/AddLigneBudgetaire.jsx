@@ -19,7 +19,7 @@ const formSchema = z.object({
     category: z.string().nullable(),
 });
 
-const AddBudgetaire = ({BudgetaireId}) => {
+export const AddBudgetaire = () => {
 
     const GlobalState = useGlobalContext();
     const dispatch = GlobalState?.dispatch;

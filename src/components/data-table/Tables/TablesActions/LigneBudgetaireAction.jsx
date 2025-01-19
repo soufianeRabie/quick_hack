@@ -25,7 +25,7 @@ import {
   import { useGlobalContext } from "@/context/GlobalState.jsx";
   import { Add } from "@/components/Add.jsx";
   import { ActionsApi } from "@/Services/Actions/ActionsApi.js";
-  import EditLigneBudgetaire from "@/components/Admin/LigneBudgetaire/EditLigneBudgetaire.jsx";
+  // import EditLigneBudgetaire from "@/components/Admin/LigneBudgetaire/EditLigneBudgetaire.jsx";
 
   
   export const LigneBudgetaireAction = ({ budgetaireId }) => {
@@ -117,4 +117,3 @@ import {
       </>
     );
   };
-  
