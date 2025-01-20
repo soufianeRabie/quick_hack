@@ -5,7 +5,7 @@ import {IconChecklist, IconLayoutDashboard} from "@tabler/icons-react";
 export const GlobalSideLinks = [
   {
     title: 'manage users',
-    label: '3',
+    label: '2',
     href: 'manageUsers',
     icon: <IconChecklist size={18} />,
   },
@@ -18,7 +18,7 @@ export const GlobalSideLinks = [
   // },
 
   {
-    title: 'Ligne Budgetaire',  
+    title: 'budget line',
     label: '3',
     href: 'ligne_budgetaire',
     icon: <IconChecklist size={18} />,
@@ -68,22 +68,40 @@ export const AdminSideLinks = [
     href: '/',
     icon: <IconLayoutDashboard size={18} />,
   },
-  // {
-  //   title: 'events',
-  //   label: '3',
-  //   href: 'events',
-  //   icon: <IconChecklist size={18} />,
-  // },
+  {
+    title: 'getAnalysis',
+    label: '3',
+    href: 'getAnalysis',
+    icon: <IconChecklist size={18} />,
+  },
+    {
+        title: 'chatbot',
+        label: '4',
+        href: 'chatbot',
+        icon: <IconChecklist size={18} />,
+    },
+    {
+        title: 'notifications',
+        label: '3',
+        href: 'notifications',
+        icon: <IconChecklist size={18} />,
+    },
+    {
+        title: 'payment',
+        label: '1',
+        href: 'payment',
+        icon: <IconChecklist size={18} />,
+    },
 
     {
-        title: 'DEPESNES',
-        label: '3',
+        title: 'expenses',
+        label: '2',
         href: 'DEP_MARCHE',
         icon: <IconChecklist size={18} />,
     },
     {
         title: 'budget Manager',
-        label: '3',
+        label: '6',
         href: 'Budget_Manager',
         icon: <IconChecklist size={18} />,
     },

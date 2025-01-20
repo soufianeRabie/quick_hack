@@ -105,18 +105,18 @@ export default function DepMarcheList() {
     return (
         <>
             {/* Buttons for both exports */}
-            <Button onClick={handleExportTemplate}>Export Empty Template</Button>
+            <Button  className={'mr-5'} onClick={handleExportTemplate}>Export Empty Template</Button>
             <Button onClick={handleExportData}>Export Data</Button>
 
             {/* Import File Button */}
-            <input
-                type="file"
-                accept=".xlsx, .xls"
-                onChange={(e) => setImportFile(e.target.files[0])}
-            />
-            {importFile && (
-                <Button onClick={() => handleImportData(importFile)}>Import Data</Button>
-            )}
+            {/*<input*/}
+            {/*    type="file"*/}
+            {/*    accept=".xlsx, .xls"*/}
+            {/*    onChange={(e) => setImportFile(e.target.files[0])}*/}
+            {/*/>*/}
+            {/*{importFile && (*/}
+            {/*    <Button  onClick={() => handleImportData(importFile)}>Import Data</Button>*/}
+            {/*)}*/}
 
             {/* Data Table */}
             <DataTable

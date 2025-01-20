@@ -7,6 +7,12 @@ export const ActionsApi = {
   getLignesBudgetaires: async () => {
     return await axiosConfig.get("/api/ligne-budgetaires");
   },
+  ChatBot: async (message) => {
+    return await axiosConfig.post("/api/ChatBot" , message);
+  },
+  getAnalysis: async () => {
+    return await axiosConfig.get("/api/getAnalysis");
+  },
   addLigneBudgetaire: async (ligneBudgetaire) => {
     return await axiosConfig.post("/api/ligne-budgetaires", ligneBudgetaire);
   },

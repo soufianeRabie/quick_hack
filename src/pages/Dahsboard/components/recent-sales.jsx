@@ -18,7 +18,7 @@ export function RecentSales({ expenses }) {
                         </p>
                     </div>
                     <span className="font-bold text-red-600">
-                        -${parseFloat(expense.amount).toFixed(2)}
+                        -DH {parseFloat(expense.amount).toFixed(2)}
                     </span>
                 </li>
             ))}

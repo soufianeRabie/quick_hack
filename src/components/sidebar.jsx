@@ -76,8 +76,8 @@ export default function Sidebar2({
                         <div
                             className={`flex flex-col justify-end truncate ${isCollapsed ? 'invisible w-0' : 'visible w-auto'}`}
                         >
-                            <span className='font-medium'>SOUFIANE RABYA</span>
-                            <span className='text-xs'>{state.user?.name}</span>
+                            <span className='font-medium'>FINOVA</span>
+                            {/*<span className='text-xs'>{state.user?.name}</span>*/}
                         </div>
                     </div>
 

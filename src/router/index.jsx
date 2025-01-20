@@ -46,6 +46,31 @@ const router = createBrowserRouter([
                 }),
             },
             {
+                path: '/payment',
+                lazy: async () => ({
+                    Component: (await import('../pages/payement/index.jsx')).default,
+                }),
+            },
+            {
+                path: '/notifications',
+                lazy: async () => ({
+                    Component: (await import('../pages/Dahsboard/Notifications.jsx')).default,
+                }),
+            },
+            {
+                path: '/chatbot',
+                lazy: async () => ({
+                    Component: (await import('../pages/Dahsboard/CahtBot.jsx')).default,
+                }),
+            },
+
+            {
+                path: '/getAnalysis',
+                lazy: async () => ({
+                    Component: (await import('../pages/DEPMARCHES/Analysis.jsx')).default,
+                }),
+            },
+            {
                 path: '/events',
                 lazy: async () => ({
                     Component: (await import('../pages/Event/index.jsx')).default,

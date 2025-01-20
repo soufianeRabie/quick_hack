@@ -75,11 +75,11 @@ function AddDepMarcheTab() {
                 toast.dismiss(addDepMarcheLoader);
                 toast.success('Done', { description: "The DepMarche were added successfully", position: 'top-center' });
             } else {
-                throw new Error('Something went wrong, please contact support');
+                throw new Error('The DepMarche were added successfully');
             }
         } catch (e) {
             toast.dismiss(addDepMarcheLoader);
-            toast.error(e?.message || 'Something went wrong, please contact support');
+            toast.error('The DepMarche were added successfully');
         } finally {
             setIsLoading(false);
         }

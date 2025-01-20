@@ -14,41 +14,7 @@ import {
 import {useGlobalContext} from "@/context/GlobalState.jsx";
 
 // JSON data
-const jsonData = {
-    lignes_budgetaire: [
-        {
-            id: 1,
-            name: "Electricity",
-            description: "Electricity bills for operations",
-            expense_type: "Electricity",
-            annual_budget: "50000.00",
-            spent_amount: "35000.00",
-            year: "2025",
-            expenses: [
-                {
-                    id: 21,
-                    amount: "5000.00",
-                    expense_date: "2025-01-10",
-                },
-                {
-                    id: 27,
-                    amount: "5000.00",
-                    expense_date: "2025-02-15",
-                },
-                {
-                    id: 30,
-                    amount: "3000.00",
-                    expense_date: "2025-03-05",
-                },
-                {
-                    id: 35,
-                    amount: "4000.00",
-                    expense_date: "2025-01-25",
-                },
-            ],
-        },
-    ],
-};
+
 
 // Function to preprocess data
 const preprocessData = (jsonData) => {
